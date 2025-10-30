@@ -1,74 +1,89 @@
 {
-  "name": "spessasynth_lib",
-  "version": "4.0.14",
-  "description": "MIDI and SoundFont2/DLS library for the browsers with no compromises",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "npm run test:types && npm run build:npm && npm run build:pages",
-    "build:npm": "tsx build_scripts/build_npm.ts",
-    "build:pages": "tsx build_scripts/build_pages.ts",
-    "test:types": "eslint src/ && tsc -b",
-    "debug": "tsx build_scripts/debug_enable.ts",
-    "release": "tsx build_scripts/debug_disable.ts",
-    "prepack": "npm run build:npm",
-    "prepublishOnly": "npm run release && npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/spessasus/spessasynth_lib.git"
-  },
-  "keywords": [
-    "soundfont",
-    "synthesizer",
-    "synth",
-    "sf2",
-    "sf3",
-    "dls",
-    "dls-to-sf2",
-    "midi",
-    "rmi",
-    "midi-player",
-    "web-audio-api",
-    "web-midi-api",
-    "player",
-    "soundfont2",
-    "soundfont3",
-    "audio-buffer-to-wav"
-  ],
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md",
-    "package.json"
-  ],
-  "author": {
-    "name": "spessasus",
-    "email": "spesekspesek@gmail.com",
-    "url": "https://github.com/spessasus"
-  },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/spessasus/spessasynth_lib/issues",
-    "email": "spesekspesek@gmail.com"
-  },
-  "homepage": "https://github.com/spessasus/spessasynth_lib#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.32.0",
-    "@types/audioworklet": "^0.0.81",
-    "@types/node": "^24.1.0",
-    "esbuild": "^0.25.8",
-    "eslint": "^9.32.0",
-    "globals": "^16.3.0",
-    "prettier": "^3.6.2",
-    "tsup": "^8.5.0",
-    "tsx": "^4.20.5",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0"
-  },
-  "dependencies": {
-    "spessasynth_core": "latest"
-  }
+    "name": "spessasynth_lib",
+    "version": "4.0.12",
+    "description": "MIDI and SoundFont2/DLS library for the browsers with no compromises",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "npm run test:types && npm run build:npm && npm run build:pages",
+        "build:npm": "tsx build_scripts/build_npm.ts",
+        "build:rpgmv": "tsx build_scripts/build_rpgmv.ts",
+        "build:rpgmv:rollup": "tsx build_scripts/build_rpgmv_rollup.ts",
+        "build:pages": "tsx build_scripts/build_pages.ts",
+        "test:types": "eslint src/ && tsc -b",
+        "debug": "tsx build_scripts/debug_enable.ts",
+        "release": "tsx build_scripts/debug_disable.ts",
+        "prepack": "npm run build:npm",
+        "prepublishOnly": "npm run release && npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spessasus/spessasynth_lib.git"
+    },
+    "keywords": [
+        "soundfont",
+        "synthesizer",
+        "synth",
+        "sf2",
+        "sf3",
+        "dls",
+        "dls-to-sf2",
+        "midi",
+        "rmi",
+        "midi-player",
+        "web-audio-api",
+        "web-midi-api",
+        "player",
+        "soundfont2",
+        "soundfont3",
+        "audio-buffer-to-wav"
+    ],
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md",
+        "package.json"
+    ],
+    "author": {
+        "name": "spessasus",
+        "email": "spesekspesek@gmail.com",
+        "url": "https://github.com/spessasus"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/spessasus/spessasynth_lib/issues",
+        "email": "spesekspesek@gmail.com"
+    },
+    "homepage": "https://github.com/spessasus/spessasynth_lib#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.28.3",
+        "@babel/core": "^7.28.4",
+        "@babel/preset-env": "^7.28.3",
+        "@eslint/js": "^9.32.0",
+        "@rollup/plugin-babel": "^6.1.0",
+        "@rollup/plugin-commonjs": "^28.0.9",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^12.3.0",
+        "@types/audioworklet": "^0.0.81",
+        "@types/node": "^24.1.0",
+        "core-js": "^3.45.1",
+        "esbuild": "^0.25.8",
+        "eslint": "^9.32.0",
+        "globals": "^16.3.0",
+        "prettier": "^3.6.2",
+        "regenerator-runtime": "^0.14.1",
+        "rollup": "^4.52.5",
+        "rollup-plugin-string": "^3.0.0",
+        "tslib": "^2.8.1",
+        "tsup": "^8.5.0",
+        "tsx": "^4.20.5",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.38.0"
+    },
+    "dependencies": {
+        "spessasynth_core": "latest"
+    }
 }
